@@ -1,0 +1,103 @@
+@keyframes mb {
+    25%{
+        box-shadow: 308px 30px 190px 110px #5698B5;
+    }
+    50%{
+        box-shadow: 308px 308px 190px 110px #5698B5;
+        
+    }
+    75%{
+        box-shadow: 30px 308px 190px 110px #5698B5;
+        
+    }
+    100%{
+        box-shadow: 30px 30px 190px 110px #5698B5;
+    }
+}
+@keyframes mb1 {
+    25%{
+        box-shadow: 30px 30px 190px 110px #5698B5;
+    }
+
+    100%{
+        box-shadow: 362px 249px 170px 110px #5698B5;
+    }
+}
+
+@keyframes bsUD {
+
+    33%{
+        translate: 0 -10%;
+    }
+    66%{
+        translate: 0 10%;
+    }
+    100%{
+        translate: 0 0;
+    }
+}
+
+@keyframes pulse {
+    to{
+        box-shadow: 0 0 20px 10px #64B16300;
+    }
+}
+@keyframes beat {
+    50%{
+        width: 40%;
+        height: 40%;
+    }
+}
+
+@keyframes moving-Text {
+    to{
+        background-position-x: 600px;
+    }
+}
+.show {
+    animation: shows 1s ease-out 1 forwards;
+}
+
+@keyframes shows {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes show-slide {
+    from{
+        background-size: 0rem;
+    }
+    to{
+        background-size: 500rem;
+    }
+}
+@keyframes hide-slide {
+    from{
+        background-size: 500rem;
+    }
+    to{
+        background-size: 0rem;
+    }
+}
+
+@keyframes rotateBF {
+    0% {
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+        color: var(--secundayDark);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes brotate {
+    50%{
+        rotate: 10deg;
+    }
+}

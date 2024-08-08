@@ -1,0 +1,317 @@
+body{
+    background-color: black;
+    color: whitesmoke;
+    overflow-x: clip;
+}
+section{
+    min-height: 100vh;
+    width: 100vw;
+    margin: auto;
+    position: relative;
+}
+
+.t1{
+    position: relative;
+   left: -4%;
+}
+.t1::after{
+    content: "&";
+    display: inline-block;
+    translate: 0 60px;
+    font-size: calc(var(--xl) - 1rem);
+}
+.t2{
+    position: relative;
+    right: -4%;
+}
+#intro h1{
+    letter-spacing: 0.3rem;
+    font-family: 'Antonio', Arial;
+}
+#intro span{ 
+    font-family: "inter", sans-serif;
+    width: 85px;
+    font-size: 1rem;
+}
+.background{
+    position: absolute;
+    height: 111%;
+    width: 100%;
+    backdrop-filter: blur(80px);
+}
+.crl{
+   border-radius: 50%;
+    position: absolute;
+}
+.d{
+    width: 20%;
+    height: 20%;
+    background-color: #64B163;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    animation: beat 5s ease  infinite;
+    
+}
+.d1{
+    width: 70%;
+    height: 70%;
+    background-color: var(--highlightSecundary);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    opacity: 0.3;
+}
+#intro span::after{
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    translate: 4px 3px;
+    background: radial-gradient( #4ADE47, #64B163);
+    box-shadow: 0 0 10px 3px #64B163;
+    animation: pulse 1.5s ease-out 0.5s infinite ;
+}
+#diacription{
+
+}
+#description .ad::before{
+    content: "";
+    background-color: #5557;
+    width: 100%;
+    top: 80vh;
+    color: var(--primaryDark);
+    transform: skewY(-13deg);
+    height: 36%;
+    position: relative;
+}
+#description .moving-text{
+    height: 100px;
+    width: 100%;
+    position: relative;
+    font-size: var(--medium);
+    color: var(--secundary);
+    rotate: 10deg;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100px' width='600px'><style>.arial{font-family: system-ui; font-weight: 100;}</style><text x='0' y='84' fill='lightgray' class='arial' font-size='100'>DEVELOPER</text></svg>");
+    background-position-y: 0px;
+    animation: moving-Text 4s linear infinite;
+}
+#description .ribbon{
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    color: var(--primaryDark);
+    transform: skewY(10deg);
+    height: 600px;
+    translate: 0;
+    justify-content: center;
+   
+}
+#description .flex-row{
+    max-width: fit-content;
+    height: fit-content;
+    transform: skewY(-10deg);
+    justify-self: center;
+    align-self: center;
+
+}
+#description .flex{
+    gap: 4rem;
+}
+.main-description{
+    color: var(--primaryDark);
+    z-index: 1;
+    font-weight: 300;
+    width: 37ch;
+    font-family: "Antonio", Arial, Helvetica, sans-serif;
+    font-size: var(--large);
+
+    top: 50px;
+    left: 100px;
+
+}
+#description p{
+    font-size: var(--medium);
+    font-family: "Antonio";
+    color: var(--secundayDark);
+    width: 37ch;
+    z-index: 1;
+    top: 300px;
+    left: 400px;
+    align-self: end;
+}
+#description .triangle{
+    height: 500px;
+    width: 400px;
+    z-index: 1;
+    
+}
+.triangle img{
+    translate: 0 -25%;
+    mask-image: linear-gradient(to bottom, black 64%, black 58%, transparent 97%);
+    filter: grayscale(1) drop-shadow( -2px 6px 4px #666) drop-shadow(10px 6px 3px #5ca8) drop-shadow(-26px 30px 1px #4EE9) drop-shadow(-34px 45px 1px #7Fd8) ;
+    transition: filter 0.3s ease-in-out;
+}
+#services .container{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: auto;
+}
+
+.left{
+
+    font-size: var(--large);
+    position: relative;
+    z-index: 10;
+    height: 100%;
+}
+.left-c{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    
+}
+.left-c h1{
+    text-shadow: 2px 2px 13px #888;
+    width: fit-content;
+    translate: 100px 50px;
+    z-index: 10;
+    font-size: var(--xl);
+    font-family: "Anton", Arial, Helvetica, sans-serif;
+}
+.count{
+    font-size: var(--xxl);
+    color: transparent;
+    -webkit-text-stroke: 3px var(--primary);
+    font-family: "inter", sans-serif;
+    font-weight: 900;
+    translate: 0 50px;
+}
+.left figure{
+    align-self: end;
+    translate: 0 -0.5rem;
+    box-shadow: -30px 50px 80px 10px #5098CD55;
+}
+
+.right{
+    font-size: var(--large);
+    max-height: 80%;
+    justify-content: center;
+    padding-left: 30px;
+    box-sizing: border-box;
+    position: relative;
+    top: 80px;
+    scrollbar-width: noned;
+}
+.right .spacer{
+    display: block;
+    height: 50vh;
+}
+.service{
+    text-wrap: nowrap;
+    border-bottom: 1px solid #afc;
+    letter-spacing: 10px;
+    padding-top: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    padding-top: 25px;
+    max-width: 600px;
+}
+.service *{
+    transition: all 0.3s ease-in;
+}
+.service-tB{
+    display: inline-block;
+    translate: -2.3rem;
+    color: var(--highlightPrimary);
+}
+
+#service-t::after{
+    content: "+";
+    font-family: "inter";
+    font-weight: 200;
+    text-align: center;
+    scale: 1.5;
+    width: 20px;
+    height: 43px;
+    padding: 4px;
+    display:block;
+    position:absolute;
+    font-size: xx-large;
+    bottom: 0;
+    right: 5px;
+    z-index: 1;
+
+}
+#service-t:hover::after{
+    transform-origin: center;
+    animation: rotateBF 0.6s ease-in-out forwards;
+    
+}
+
+.service-d{
+    transition: all 0.3s ease-in;
+    text-wrap: wrap;
+    width: calc(100% + 5rem);
+    height: fit-content;
+    transform-origin: bottom;
+    letter-spacing: normal;
+    padding: 2rem;
+    padding-left: 6rem;
+    background-color: var(--highlightSecundaryDark);
+    translate: -5rem;
+    
+}
+
+.service-d p{
+    color: var(--primary);
+    font-family: "inter", sans-serif;
+    font-weight: 300;
+    font-size: var(--normal);
+    width: calc(100% + 5rem);;
+    max-width: 400px;
+    transition: height 0.3s linear;
+}
+#services figure{
+    width: 600px;
+    height: 400px;
+    border-radius: 200px / 300px;
+    border-collapse: collapse;
+    object-fit: cover;
+    overflow: clip;
+}
+#services img{
+    width: 100%;
+    height: 100%;
+}
+#oow{
+    min-height: 106vh;
+}
+#oow h1{
+    text-shadow: 1px 1px 5px var(--secundayDark);
+    font-size: 7rem;
+    translate: 0px 3rem;
+    font-family: "Anton", Arial, Helvetica, sans-serif;
+}
+#oww .container{
+    display: grid;
+    place-content: center;
+}
+
+
+#oow figure{
+    width: 27rem;
+    height: 600px;
+    border-radius: 2rem;
+    overflow: clip;
+}
+#oow img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+

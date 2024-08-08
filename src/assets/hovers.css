@@ -1,0 +1,15 @@
+#about .about-link-container:hover .about-link {
+    height: 5rem;
+    width: 5rem;
+    rotate: 0deg;
+}
+.ribbon:hover .triangle img{
+    filter: drop-shadow(-2px 6px 4px #666) drop-shadow(10px 6px 3px #5ca8) drop-shadow(-26px 30px 1px #4EE9) drop-shadow(-34px 45px 1px #7Fd8) grayscale(0);
+
+}
+
+nav ul a:hover{
+    border-radius: 20%;
+    box-shadow: 0px 0px 1rem 2px #469f95;
+    background: linear-gradient(to right, #469f9586 , #7cacf486);
+}
