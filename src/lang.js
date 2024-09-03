@@ -78,7 +78,13 @@ const en = {
         name: { text: "PROVIDE ME YOUR NAME" },
         email: { text: "WHAT'S YOUR EMAIL?" },
         descript: { text: "TELL ME, HOW CAN I HELP?" },
-        send: { text: "SEND EMAIL" }
+        send: { text: "SEND EMAIL" },
+        send1: {
+            text: "The email was sent ✓"
+        },
+        send2: {
+            text: "The email was not send X"
+        }
     },
     about: {
         t1: { text: "Software Developer" },
@@ -211,7 +217,13 @@ placeholder: {
         text: "CUÉNTAME, ¿CÓMO PUEDO AYUDARTE?"
     },
     send: {
-        text: "ENVIAR CORREO ELECTRÓNICO"
+        text: "ENVIAR CORREO"
+    },
+    send1: {
+        text: "Mensaje enviado ✓"
+    },
+    send2: {
+        text: "Mensaje no enviado X"
     }
 },
 about: {
@@ -286,6 +298,9 @@ export function translate(lan, page){
         addProjects()
     }
     for(var elm of Object.keys(lan.placeholder)){
+        if(elm === 'send'){
+            document.querySelector(`[data-lang ='${elm}']`).value = lan.placeholder[elm].text
+        }
         document.querySelector(`[data-lang ='${elm}']`).placeholder = lan.placeholder[elm].text
     }
     

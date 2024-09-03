@@ -1,5 +1,6 @@
 import { findParent, servicesAction, servicetEv } from "./about.js";
 import { goTO } from "./assets/helpers/router.js";
+import { langScript } from "./lang.js";
 import { addProjects, addScroll } from "./skills.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -50,17 +51,17 @@ document.addEventListener("DOMContentLoaded", () => {
         email.value = "";
         name.value = "";
         body.value = "";
-        tosumit.value = "The email was sent ✓";
+        tosumit.value = langScript.placeholder.send1;
         tosumit.style.backgroundColor = "lightseagreen";
         setTimeout(() => {
-          tosumit.value = "SEND EMAIL";
+          tosumit.value = langScript.placeholder.send;
           tosumit.style.backgroundColor = "";
         }, 3000);
       } else {
-        tosumit.value = "The email was not send X";
+        tosumit.value = langScript.placeholder.send2;
         tosumit.style.backgroundColor = "salmon";
         setTimeout(() => {
-          tosumit.value = "SEND EMAIL";
+          tosumit.value = langScript.placeholder.send;
           tosumit.style.backgroundColor = "";
         }, 3000);
       }
