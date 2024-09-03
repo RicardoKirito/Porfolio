@@ -92,7 +92,11 @@ const en = {
         sp2: { text: "FRONT-END" },
         spd2: { text: "I have hands-on experience with React for building dynamic user interfaces. My front-end expertise includes implementing responsive designs and optimizing performance for seamless user experiences." },
         sp3: { text: "WEB DESIGN" },
-        spd3: { text: "I specialize in creating visually appealing and user-friendly web designs. My skills include crafting responsive layouts and ensuring an intuitive user experience across various devices." }
+        spd3: { text: "I specialize in creating visually appealing and user-friendly web designs. My skills include crafting responsive layouts and ensuring an intuitive user experience across various devices." },
+        q1: { text: "YOU LIKED MY WORK?" },
+        q2: { text: "LET'S" },
+        q3: { text: "CONNECT" },
+        find: { text: "FIND ME ON" }
     }
 };
 const es = {
@@ -246,7 +250,20 @@ about: {
         },
         spd3: {
             text: "Me especializo en crear diseños web visualmente atractivos y fáciles de usar. Mis habilidades incluyen la creación de diseños responsivos y garantizar una experiencia de usuario intuitiva en diversos dispositivos."
+        },
+        q1: {
+            text: "¿TE GUSTÓ MI TRABAJO?"
+        },
+        q2: {
+            text: "GENIAL!"
+        },
+        q3: {
+            text: "CONTACTAME"
+        },
+        find: {
+            text: "ESTOY EN"
         }
+        
     }
 };
 let lan = 'en'
