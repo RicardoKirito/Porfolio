@@ -12,6 +12,7 @@ section{
     margin: auto;
     position: relative;
 }
+
 .dinamic-bg{
     background: radial-gradient(circle, #173C5E 0%, rgba(0,0,0,1) 92%);
     height: 100vh;
@@ -75,9 +76,11 @@ section{
     font-size: clamp(1rem, 16vw, 22rem);
     text-align: center;
     position:sticky;
-    top: 20px;
+    top: 0px;
+    padding-top: 23px;
+    backdrop-filter: blur(10px);
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 6px ;
+    -webkit-text-stroke: clamp(1px, 0.4vw, 10px) ;
     font-family:"Antonio",'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
@@ -92,30 +95,26 @@ section{
     scroll-snap-align: center;
     display: flex;
     justify-content: start;
-    gap: 10vw;
-    z-index: 20;
     padding-right: 8vw;
+    z-index: 1;
 }
 
 .project figure{
-    height: fit-content;
-    width: 95%;
+    height: 100%;
+    width: 100%;
     background-color: salmon;
     border-radius: 28px;
     overflow: clip;
 }
-.project figure img{
+.project figure video{
     height: 100%;
     width: 100%;
+    min-width: 50vw;
     object-fit: cover;
     background-color: #173C5E;
 }
 .bg-df{
-    height: 55vh;
-    width: 41vw;
     border-radius: 41px;
-    background: linear-gradient(to top, #aaa3 40%, #5551 60%);
-    backdrop-filter: blur(10px);
     display: grid;
     place-items: center;
     padding: 10px;
@@ -126,13 +125,14 @@ section{
     gap: 0.5rem;
     justify-content: center;
     align-items: start;
-    
-    padding-left: 4rem;
+    padding-left: 3rem;
+    padding-right: 2rem;
     background-color: #5555;
     flex-grow: 1;
     backdrop-filter: blur(15px);
     border-radius: 15px;
-
+    padding-bottom: 20px;
+    padding-top: 10px;
 
 }
 .project-d .pj-title{
@@ -142,10 +142,10 @@ section{
     margin-top: 2rem;
 }
 .tegnologies{
-    font-size: 2rem;
+    font-size: clamp(1rem, 135%, 16rem);
     font-family: "Antonio";
     font-weight: 100;
-    color: var(--highlightSecundaryDark);
+    color: #acd;
 }
 
 .devider{
@@ -156,6 +156,7 @@ section{
     justify-self: center;
     align-self: center;
     margin: 8px;
+    display: inline-block;
 
 }
 .bg-text{
@@ -327,16 +328,17 @@ section{
     right: 7%;
     align-items: center;
     cursor: pointer;
+
 }
-#about .about-link{
+.about-link{
     transition: all 0.3s cubic-bezier(0.74, -0.75, 0.41, 1.8);
 }
-#about .kn{
+.kn{
     background: linear-gradient(128deg, #36a, #37c, #8DC);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-#about .about-link{
+ .about-link{
     width: 3rem;
     height: 3rem;
     text-align: center;
@@ -348,7 +350,19 @@ section{
     rotate: 50deg;
 
 }
-
+#contact h1{
+    line-height: 5vw;
+    text-align: right;
+    font-size: 6.5vw;
+    position: relative;
+    z-index: 20;
+}
+#contact{
+    padding-right: 4rem;
+    min-height: calc(84vh - 80px);
+    position: relative;
+    margin-top: 80px;
+}
 /*|| ANIMATIONS*/
 @keyframes small {
     from{

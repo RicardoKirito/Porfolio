@@ -26,6 +26,7 @@
         --secundayDark: #545050;
         --highlightDark: #DFDFDF;
         --highlightSecundaryDark: #5098CD;
+        
     
     /*||FONT SIZES*/
         --xl: 6rem;
@@ -38,8 +39,8 @@
 
 /*|| UTILITY CLASS*/
 .font-large{font-size: var(--large);}
-.font-xl{font-size: var(--xl);}
-.font-xxl{font-size: var(--xxl);}
+.font-xl{font-size: clamp(1rem, 6vw, 11vw);}
+.font-xxl{font-size: clamp(1rem, 11vw, 13vw);}
 .font-big{ font-size: 25rem;}
 
 .bold{ font-weight: 900;}
@@ -50,6 +51,9 @@
 .flex{
     display: flex;
     flex-direction: column;
+}
+html{
+    scrollbar-width: none;
 }
 .bottom-right{
     position: absolute;
@@ -105,6 +109,7 @@ header{
     width: 93%;
     position: fixed;
     z-index: 100;
+    user-select: none;
 }
 /*|| TIME*/
 .timelocation-container{
@@ -114,6 +119,7 @@ header{
     z-index: 100;
     position: relative;
     overflow: hidden;
+    filter: contrast(10);
     
 }
 .time{
@@ -122,6 +128,7 @@ header{
     animation-play-state: paused;
     color: white;
     mix-blend-mode: difference;
+    text-shadow: 2px 2px 10px #777;
 }
 .location{
     font-size: 16px;
@@ -129,10 +136,13 @@ header{
     animation-play-state: paused;
     color: white;
     mix-blend-mode: difference;
+    text-shadow: 2px 2px 5px #555;
 }
 /*|| MENU*/
 nav{
     z-index: 100;
+    display: flex;
+    align-items: center;
 }
 nav ul{
     background-color: #c2c2c239;
@@ -143,32 +153,46 @@ nav ul{
     backdrop-filter: blur(26px);
     list-style: none;
     display: flex;
-    gap: 48px;
+    justify-content: space-around;
     font-weight: 100;
+    gap: 1rem;
     color: white;
     font-size: 1rem;
     ;
 }
-nav ul a{
+nav ul a, li{
     text-decoration: none;
     color: inherit;
     cursor: pointer;
-    font-family: 'Antonio', Arial, Helvetica
+    font-family: 'Antonio', Arial, Helvetica;
+    user-select: none;
+
 }
-nav li:nth-child(4){
-       display: none; 
+nav ul li{
+    font-weight: 600;
+
 }
-/*|| CONTACT*/
-#contact{
-    padding-right: 9vh;
-    min-height: calc(84vh - 80px);
-    position: relative;
-    margin-top: 80px;
-}
-.flex{
+nav .lang{
+    color: #ccc;
+    transition: all 5ms ease-in;
     display: flex;
-    flex-wrap: wrap-reverse;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
 }
+nav .lang p{
+    font-weight: 700;
+}
+nav .lang:hover{
+    color: #fff;
+}
+nav:hover li:nth-child(4){
+       animation: hide-opacity .3s ease-in 1 forwards;
+}
+nav:hover 
+
+/*|| CONTACT*/
+
 #contact h1{
     line-height: 5vw;
     text-align: right;
@@ -202,12 +226,12 @@ nav li:nth-child(4){
     box-shadow: 30px 30px 190px 110px #5698B5;
     background-color: #5099cd;
     filter: blur(5px);
-    animation: mb 8s ease infinite;
+    animation: mb 3s ease infinite;
     
 }
 .bg div:nth-child(2){
     box-shadow: 362px 249px 170px 110px #5698B5;
-    animation: mb1 8s ease-in-out infinite backwards;
+    animation: mb1 3s ease-in-out infinite backwards;
 }
 .tbg{
     width: clamp(100px, 35vw, 444px);
@@ -221,7 +245,7 @@ nav li:nth-child(4){
     color: #5098cd;
 }
 #contact h2{
-    font-size: 60px;
+    font-size: clamp(1rem, 7vw, 60px);
 }
 .contact-c{
     flex-grow: 1;
@@ -243,6 +267,7 @@ nav li:nth-child(4){
     justify-content: space-around;
     align-items: center;
     margin-top: 8px;
+    gap: 0.5rem;
 }
 .medias .media-item{
     display: flex;
@@ -257,13 +282,13 @@ nav li:nth-child(4){
 }
 .contact-c form{
     display: flex;
-     flex-direction: column;
+    flex-direction: column;
     gap: 1rem;
     margin-top: 2rem;
 }
 .contact-c form textarea{
     resize: none;
-    height: 30vh;
+    height: clamp(1rem, 18vh, 30vh)
 }
 .contact-c:nth-child(1){
     display: flex;
@@ -274,10 +299,11 @@ nav li:nth-child(4){
     border: 1.8px solid #dfdfdf;
     font-size: 18px;
     border-radius: 32px;
-    font-weight: bolder;
+    font-weight: 500;
     padding: 1.8ch;
-    color: white;
+    color: #ccc;
     font-family: 'anton', Arial;
+    letter-spacing: 0.5px;
 
 }
 .sub-input{
@@ -330,4 +356,9 @@ footer{
     min-height: 200vh;
     position:absolute;
     z-index: 1;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap-reverse;
 }

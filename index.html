@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/assets/hovers.css">
-    <link rel="stylesheet" href="/src/assets/home.css">
+    <link rel="stylesheet" href="/src/assets/about.css">
     <link rel="stylesheet" href="/src/assets/skills.css">
+    <link rel="stylesheet" href="/src/assets/home.css">
+    <link rel="stylesheet" href="/src/assets/screenrules.css">
     <link rel="stylesheet" href="/src/assets/animations.css">
-
+    <link rel="shortcut icon" href="./public/logo.jpeg" type="image/x-icon">
     <title>R.P</title>
 </head>
 
@@ -21,12 +23,19 @@
         </div>
         <nav>
             <ul>
-                <a href="/index.html">Work</a>
-                <a href="/about.html">About</a>
+                <a id="navI">Home</a>
+                <a id="navA">About</a>
                 <a href="#contact">Contact</a>
-                <li>Menu</li>
-            </ul>
 
+                <div class="lang" id="lang">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                    </svg>
+                    <p>Español</p>
+                </div>
+            </ul>
         </nav>
     </header>
 
@@ -44,21 +53,13 @@
                     <div class="bs bs1"></div>
                 </div>
                 <div class="full-screen a-center">
-                    <h1 class="font-xxl antonio">FULL STACK WEB DEVELOPER</h1>
-                    <div class="projects"></div>
-                    <div class="projects-liner">
-                        <div class="project"></div>
-                        <div class="project"></div>
-                        <div class="project"></div>
-                        <div class="project"></div>
-                        <div class="project"></div>
-                    </div>
+                    <h1 class="font-xxl antonio" data-lang="BigTitle">FULL STACK WEB DEVELOPER</h1>
                 </div>
 
             </section>
             <section class="projects">
                 <div class="bg-blur full-screen "></div>
-                <h1>Selected Work</h1>
+                <h1 data-lang="selectedWork">Selected Work</h1>
                 <div class="bg-blur"></div>
                 <div class="gallery horizontal-scroll"></div>
 
@@ -68,7 +69,7 @@
         <section></section>
         </section>
         <div class="skill-title-container">
-            <h1 class="skill-title">MY SKILLS</h1>
+            <h1 class="skill-title" data-lang="skillsTitle">MY SKILLS</h1>
         </div>
         <section></section>
         <section class="content">
@@ -90,12 +91,12 @@
                         </g>
                     </svg>
                 </figure>
-                <p class="skill-dst">`
+                <p class="skill-dst" data-lang="skill1">
                     Can lead to mantainable, secure, clean and ease to debug code compared to scripting languages.
                 </p>
             </div>
             <div class="flex-col">
-                <p class="skill-dst">
+                <p class="skill-dst" data-lang="skill2">
                     Creating alive web pages that interacts as your dream web.
                 </p>
                 <figure>
@@ -117,8 +118,8 @@
                             fill="#00D8FF" />
                     </svg>
                 </figure>
-                <p class="skill-dst">
-                    Powerful one page Applications that stand out with versatility and focus
+                <p class="skill-dst" data-lang="skill3">
+                    Powerful one page Applications that stand out with versatility and focus.
             </div>
         </section>
         <section id="change">
@@ -129,18 +130,18 @@
                 <div class="blur-blue" style="left: 76%;top: 51%;"></div>
             </div>
             <div>
-                <h1>GET TO KNOW</h1>
-                <h1>ME</h1>
-                <h2 class="skill-title">ABOUT</h2>
-                <p>I help you bring ideas to desing, transform desingn into fully funtional webs. </p>
+                <h1 data-lang="know1">GET TO KNOW</h1>
+                <h1 data-lang="know3">ME</h1>
+                <h2 class="skill-title" data-lang="know2">ABOUT</h2>
+                <p data-lang="myD">I help you bring ideas to desing, transform desingn into fully funtional webs. </p>
                 <figure>
                     <img src="https://st4.depositphotos.com/12981370/24312/i/450/depositphotos_243120806-stock-photo-programmer-working-software-development-coding.jpg"
                         alt="">
                 </figure>
-                <h5>Entusiastic of Creating big ideas</h4>
-                    <a href="about.html">
+                <h5 data-lang="myD2">Entusiastic of Creating big ideas</h4>
+                    <a id="navAb">
                         <div class="flex-row about-link-container">
-                            <div class="kn">
+                            <div class="kn" data-lang="knowB">
                                 Know more
                             </div>
                             <div class="about-link">
@@ -154,8 +155,11 @@
         </section>
     </main>
     <section id="contact">
-        <h1>YOU LIKED MY WORK?</h1>
-        <h1>LET'S <span>CONNECT</span></h1>
+        <h1 data-lang="q1">YOU LIKED MY WORK?</h1>
+
+        <h1 data-lang="q2">LET'S </h1>
+        <h1><span data-lang="q3">CONNECT</span></h1>
+
         <div class="flex-row">
             <div class="contact-c">
                 <div class="cbg">
@@ -166,35 +170,56 @@
                     </div>
                 </div>
                 <div class="social_media">
-                    <h2>FIND ME IN</h2>
+                    <h2 data-lang="find">FIND ME ON</h2>
                     <div class="medias">
-                        <div class="media-item">
-                            <svg viewBox="0 0 256 250" width="32" height="32" fill="#fff"
-                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
-                                <path
-                                    d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z" />
-                            </svg>
-                            <h4>Github</h4>
-                        </div>
-                        <div class="media-item">
-                            <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg"
-                                preserveAspectRatio="xMidYMid" viewBox="0 0 256 256">
-                                <path
-                                    d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453"
-                                    fill="#0A66C2" />
-                            </svg>
-                            <span>LinkedIn</span>
-                        </div>
+                        <a target="_blank" href="https://github.com/RicardoKirito"
+                            style="color: currentColor; text-decoration: none;">
+
+                            <div class="media-item">
+                                <svg viewBox="0 0 256 250" width="32" height="32" fill="#fff"
+                                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                                    <path
+                                        d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z" />
+                                </svg>
+                                <h4>Github</h4>
+                            </div>
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/ricardo-paniagua-elias-6a0a42242/"
+                            style="color: currentColor; text-decoration: none;">
+
+                            <div class="media-item">
+                                <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg"
+                                    preserveAspectRatio="xMidYMid" viewBox="0 0 256 256">
+                                    <path
+                                        d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453"
+                                        fill="#0A66C2" />
+                                </svg>
+                                <h4>LinkedIn</h4>
+                            </div>
+                        </a>
+                        <a target="_blank" href="https://t.me/RicardoKirito"
+                            style="color: currentColor; text-decoration: none;">
+
+                            <div class="media-item">
+                                <svg role="img" width="32" heigth="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Telegram</title>
+                                    <path
+                                        d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                                        fill="#26A5E4" />
+                                </svg>
+                                <h4>Telegram</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="contact-c">
-                <form action="">
-                    <input type="text" placeholder="TELL ME YOUR NAME" class="c-input">
-                    <input type="email" placeholder="WHAT'S YOUR EMAIL" class="c-input">
-                    <textarea name="description" id="description" class="c-input" cols="30" rows="10"
-                        placeholder="TELL ME, HOW CAN I HELP?"></textarea>
-                    <input type="submit" class="sub-input" value="SEND EMAIL">
+                <form id="email-form">
+                    <input type="text" data-lang="name" placeholder="PROVIDE ME YOUR NAME" id="name" class="c-input">
+                    <input type="email" data-lang="email" placeholder="WHAT'S YOUR EMAIL" id="email" class="c-input">
+                    <textarea name="description" data-lang="descript" id="description" class="c-input" cols="30"
+                        rows="10" placeholder="TELL ME, HOW CAN I HELP?"></textarea>
+                    <input type="submit" data-lang="send" name="tosubmit" class="sub-input" value="SEND EMAIL">
                 </form>
             </div>
         </div>
@@ -203,8 +228,19 @@
     <footer>&copy; 2024 RICARDO PANIAGUA
     </footer>
     <script src="src/skills.js" type="module"></script>
+    <script src="src/assets/helpers/router.js" type="module"></script>
+    <script src="src/about.js" type="module"></script>
     <script src="src/index.js" type="module"></script>
-
+    <script src="src/lang.js" type="module"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "hKNPCL9anFACclLat",
+            });
+        })();
+    </script>
 </body>
 
 </html>

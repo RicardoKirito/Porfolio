@@ -1,14 +1,4 @@
-body{
-    background-color: black;
-    color: whitesmoke;
-    overflow-x: clip;
-}
-section{
-    min-height: 100vh;
-    width: 100vw;
-    margin: auto;
-    position: relative;
-}
+
 
 .t1{
     position: relative;
@@ -17,8 +7,8 @@ section{
 .t1::after{
     content: "&";
     display: inline-block;
-    translate: 0 60px;
-    font-size: calc(var(--xl) - 1rem);
+    translate: 0 1ch;
+    font-size: 2ch;
 }
 .t2{
     position: relative;
@@ -109,11 +99,12 @@ section{
    
 }
 #description .flex-row{
-    max-width: fit-content;
+    width: fit-content;
     height: fit-content;
     transform: skewY(-10deg);
     justify-self: center;
     align-self: center;
+    max-width: 95vw;
 
 }
 #description .flex{
@@ -125,14 +116,14 @@ section{
     font-weight: 300;
     width: 37ch;
     font-family: "Antonio", Arial, Helvetica, sans-serif;
-    font-size: var(--large);
+    font-size: clamp(1rem, 3vw, var(--large));
 
     top: 50px;
     left: 100px;
 
 }
 #description p{
-    font-size: var(--medium);
+    font-size: clamp(1rem, 3vw, var(--medium));
     font-family: "Antonio";
     color: var(--secundayDark);
     width: 37ch;
@@ -140,9 +131,10 @@ section{
     top: 300px;
     left: 400px;
     align-self: end;
+
 }
 #description .triangle{
-    height: 500px;
+    height: auto;
     width: 400px;
     z-index: 1;
     
@@ -152,6 +144,9 @@ section{
     mask-image: linear-gradient(to bottom, black 64%, black 58%, transparent 97%);
     filter: grayscale(1) drop-shadow( -2px 6px 4px #666) drop-shadow(10px 6px 3px #5ca8) drop-shadow(-26px 30px 1px #4EE9) drop-shadow(-34px 45px 1px #7Fd8) ;
     transition: filter 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+
 }
 #services .container{
     display: grid;
@@ -220,7 +215,9 @@ section{
     transition: all 0.3s ease-in;
     padding-top: 25px;
     max-width: 600px;
+
 }
+
 .service *{
     transition: all 0.3s ease-in;
 }
@@ -281,12 +278,14 @@ section{
     height: 400px;
     border-radius: 200px / 300px;
     border-collapse: collapse;
-    object-fit: cover;
     overflow: clip;
+    background-color: #000;
 }
 #services img{
+    object-fit: cover;
     width: 100%;
     height: 100%;
+    mask-image: radial-gradient(ellipse, black 0%, black 47%, transparent 81%);
 }
 #oow{
     min-height: 106vh;

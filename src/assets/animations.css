@@ -1,26 +1,26 @@
 @keyframes mb {
     25%{
-        box-shadow: 308px 30px 190px 110px #5698B5;
+        box-shadow: 308px 30px 190px 110px #35c2ff;
     }
     50%{
-        box-shadow: 308px 308px 190px 110px #5698B5;
+        box-shadow: 308px 308px 190px 110px #35c2ff;
         
     }
     75%{
-        box-shadow: 30px 308px 190px 110px #5698B5;
+        box-shadow: 30px 308px 190px 110px #35c2ff;
         
     }
     100%{
-        box-shadow: 30px 30px 190px 110px #5698B5;
+        box-shadow: 30px 30px 190px 110px #35c2ff;
     }
 }
 @keyframes mb1 {
     25%{
-        box-shadow: 30px 30px 190px 110px #5698B5;
+        box-shadow: 30px 30px 190px 110px #64a9c6;
     }
 
     100%{
-        box-shadow: 362px 249px 170px 110px #5698B5;
+        box-shadow: 362px 249px 170px 110px #64a9c6;
     }
 }
 
@@ -99,5 +99,52 @@
 @keyframes brotate {
     50%{
         rotate: 10deg;
+    }
+}
+@keyframes hide-opacity {
+    0% {
+        opacity: 1;
+
+    }   
+    60%{
+        opacity: 0.4;
+        scale: 0.8;
+    } 
+    90%{
+        opacity: 0.1;
+        scale: 0.4;
+    }
+    100%{
+        opacity: 0;
+        scale: 0;
+        display: none;
+    }
+}
+@keyframes show-opacity {
+    0% {
+        opacity: 0;
+        scale: 0;
+    }  
+    10%{
+
+        opacity: 0.1;
+        scale: 0.1;
+    } 
+    20%{
+        scale: 0.8;
+        opacity: 0.2;
+    }
+    90%{
+        opacity: 0.9;
+        scale: 1;
+    }
+    100%{
+        opacity: 1;
+        scale: 1;
+    }
+}
+@keyframes menugrow {
+    to{
+        width: 400px;
     }
 }
