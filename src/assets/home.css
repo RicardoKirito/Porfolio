@@ -55,6 +55,19 @@
 html{
     scrollbar-width: none;
 }
+.page-loader{
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    display: grid;
+    place-content: center;
+}
+.page-loader h1{
+    text-shadow: 0 0 10px #ccc;
+}
 .bottom-right{
     position: absolute;
     bottom: 20px;
@@ -181,7 +194,8 @@ nav .lang{
     cursor: pointer;
 }
 nav .lang p{
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 0.8rem;
 }
 nav .lang:hover{
     color: #fff;

@@ -120,31 +120,31 @@
         display: none;
     }
 }
-@keyframes show-opacity {
-    0% {
-        opacity: 0;
-        scale: 0;
-    }  
-    10%{
 
-        opacity: 0.1;
-        scale: 0.1;
-    } 
-    20%{
-        scale: 0.8;
-        opacity: 0.2;
-    }
-    90%{
-        opacity: 0.9;
-        scale: 1;
-    }
-    100%{
-        opacity: 1;
-        scale: 1;
-    }
-}
 @keyframes menugrow {
     to{
         width: 400px;
     }
 }
+@keyframes scale-up-hor-left {
+    0% {
+        transform: scaleX(1);
+        transform-origin: 0% 0%;
+        filter: brightness(0);
+}
+100% {
+        transform: scaleX(0);
+        transform-origin: 0% 0%;
+}
+  }
+@keyframes scale-up-hor-right {
+    0% {
+              transform: scaleX(0);
+              transform-origin: 0% 0%;
+              filter: brightness(0);
+    }
+    100% {
+              transform: scaleX(1);
+              transform-origin: 0% 0%;
+    }
+  }

@@ -1,54 +1,55 @@
 import { reveal } from "./assets/helpers/animation.js";
 import { langScript } from "./lang.js";
 
-const change = document.querySelector("#change");
-const title = document.querySelector(".skill-title");
-const cr = change.getBoundingClientRect();
-
 /* const obvSection = new IntersectionObserver(
   (entries, obv)=>{
     entries.forEach(entry=>{
       if(entry.intersectionRatio == 1){
         disableScroll();
+        
+        }
+        })
+        }
+        )
+        */
 
-      }
-    })
-  }
-)
- */
+export function addScroll() {
+  let about = false;
+  document.addEventListener("wheel", (e) => {
+    const change = document.querySelector("#change");
+    const title = document.querySelector(".skill-title");
+    const cr = change.getBoundingClientRect();
+    if (
+      parseInt(visualViewport.height - change.getBoundingClientRect().bottom) >
+        -100 &&
+      e.deltaY > 0 &&
+      !about
+    ) {
+      about = true;
+      disableScroll();
 
-let about = false;
-document.addEventListener("wheel", (e) => {
-  if (
-    parseInt(visualViewport.height - change.getBoundingClientRect().bottom) >
-      -100 &&
-    e.deltaY > 0 &&
-    !about
-  ) {
-    about = true;
-    disableScroll();
+      setTimeout(function () {
+        enableScroll();
+      }, 800);
 
-    setTimeout(function () {
-      enableScroll();
-    }, 800);
+      reveal(title, langScript.home.about.text, 700);
+    }
+    if (
+      parseInt(visualViewport.height - change.getBoundingClientRect().bottom) <
+        -100 &&
+      e.deltaY < 0 &&
+      about
+    ) {
+      about = false;
+      disableScroll();
 
-    reveal(title, langScript.home.about.text, 700);
-  }
-  if (
-    parseInt(visualViewport.height - change.getBoundingClientRect().bottom) <
-      -100 &&
-    e.deltaY < 0 &&
-    about
-  ) {
-    about = false;
-    disableScroll();
-
-    setTimeout(function () {
-      enableScroll();
-    }, 800);
-    reveal(title, langScript.home.skillsTitle.text, 800);
-  }
-});
+      setTimeout(function () {
+        enableScroll();
+      }, 800);
+      reveal(title, langScript.home.skillsTitle.text, 800);
+    }
+  });
+}
 
 function disableScroll() {
   document.body.style.overflow = "hidden";

@@ -1,9 +1,16 @@
 import { findParent, servicesAction, servicetEv } from "./about.js";
 import { goTO } from "./assets/helpers/router.js";
-import { addProjects } from "./skills.js";
+import { addProjects, addScroll } from "./skills.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  //Remove loader
+  window.addEventListener('load', e=>{
+    setTimeout(()=>{
+      document.querySelector(".page-loader").style.animation="scale-up-hor-left .5s cubic-bezier(1, 0.28, 0.28, 0.98) forwards"
+
+    },2000)
+  })
   //Email Form
   const i = document.querySelector(".gallery horizontal-scroll");
   const form = document.querySelector("#email-form");
@@ -60,15 +67,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   addProjects()
+  addScroll()
   document.addEventListener("click", async e=>{
+    const loaderpage =document.querySelector(".page-loader")
     
     if(e.target.matches("#navI")){
-      goTO('home');
+
+      loaderpage.style.animation="scale-up-hor-right .5s cubic-bezier(1, 0.28, 0.28, 0.98) forwards"
+      loaderpage.firstElementChild.textContent = 'HOME';
+      setTimeout(()=>{
+        goTO('home');
+        addScroll()
+        loaderpage.firstElementChild.textContent = '';
+        loaderpage.style.animation="scale-up-hor-left 1s cubic-bezier(1, 0.28, 0.28, 0.98) forwards"     
+        
+      }, 1000)
       
     }
     if(e.target.matches("#navA") || findParent(e.target, 'navAb', 'id')){
-      goTO('about')
-      servicesAction()
+      loaderpage.style.animation="scale-up-hor-right .5s cubic-bezier(1, 0.28, 0.28, 0.98) forwards"
+      loaderpage.firstElementChild.textContent = 'ABOUT';
+      setTimeout(()=>{
+        goTO('about');
+        servicesAction()
+        loaderpage.firstElementChild.textContent = '';
+        loaderpage.style.animation="scale-up-hor-left 1s cubic-bezier(1, 0.28, 0.28, 0.98) forwards"
+        
+      }, 1000)
     }
   })
 });
