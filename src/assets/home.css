@@ -307,6 +307,7 @@ nav:hover
 .contact-c:nth-child(1){
     display: flex;
     align-items: end;
+    min-height: 27vh;
 }
 .c-input {
     background-color: transparent;
@@ -328,6 +329,7 @@ nav:hover
     background-color: #5098cd;
     color: white;
     font-weight: bolder;
+    cursor: pointer;
 }
 .c-::placeholder{
     color: #777;

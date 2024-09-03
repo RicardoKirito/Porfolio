@@ -8,6 +8,7 @@
     #about h1:nth-child(1) {
         position: static;
         translate: 0 0;
+        height: fit-content;
     }
     #about p{
         width: auto;
@@ -60,7 +61,11 @@
         flex-wrap: wrap-reverse;
     }
     .contact-c{
-        height: 43vh;
+        
+        height: 63vh;
+    }
+    .contact-c:nth-child(1) {
+        height: 27vh;;
     }
     .cbg .tbg{
         display: none;

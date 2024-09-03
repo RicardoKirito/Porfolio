@@ -51,17 +51,17 @@ document.addEventListener("DOMContentLoaded", () => {
         email.value = "";
         name.value = "";
         body.value = "";
-        tosumit.value = langScript.placeholder.send1;
+        tosumit.value = langScript.placeholder.send1.text;
         tosumit.style.backgroundColor = "lightseagreen";
         setTimeout(() => {
-          tosumit.value = langScript.placeholder.send;
+          tosumit.value = langScript.placeholder.send.text;
           tosumit.style.backgroundColor = "";
         }, 3000);
       } else {
-        tosumit.value = langScript.placeholder.send2;
+        tosumit.value = langScript.placeholder.send2.text;
         tosumit.style.backgroundColor = "salmon";
         setTimeout(() => {
-          tosumit.value = langScript.placeholder.send;
+          tosumit.value = langScript.placeholder.send.text;
           tosumit.style.backgroundColor = "";
         }, 3000);
       }
