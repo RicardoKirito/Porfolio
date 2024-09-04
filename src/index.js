@@ -1,5 +1,5 @@
 import { findParent, servicesAction, servicetEv } from "./about.js";
-import { goTO } from "./assets/helpers/router.js";
+import { currentPage, goTO } from "./assets/helpers/router.js";
 import { langScript } from "./lang.js";
 import { addProjects, addScroll } from "./skills.js";
 
@@ -68,30 +68,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   addProjects()
-  addScroll()
   document.addEventListener("click", async e=>{
     const loaderpage =document.querySelector(".page-loader")
     
     if(e.target.matches("#navI")){
 
       loaderpage.style.animation="scale-up-hor-right .5s cubic-bezier(1, 0.28, 0.28, 0.98) forwards"
-      loaderpage.firstElementChild.textContent = 'HOME';
+      const loader = loaderpage.querySelector(".loader")
+      const loadertittle = loaderpage.querySelector("#loadertittle")
+      
+      if(loader) loader.remove()
+      loadertittle.textContent = 'HOME';
       setTimeout(()=>{
         goTO('home');
         addScroll()
-        loaderpage.firstElementChild.textContent = '';
+        loadertittle.textContent = '';
         loaderpage.style.animation="scale-up-hor-left 1s cubic-bezier(1, 0.28, 0.28, 0.98) forwards"     
         
       }, 1000)
       
     }
     if(e.target.matches("#navA") || findParent(e.target, 'navAb', 'id')){
+      const loader = loaderpage.querySelector(".loader")
+      const loadertittle = loaderpage.querySelector("#loadertittle")
+      
       loaderpage.style.animation="scale-up-hor-right .5s cubic-bezier(1, 0.28, 0.28, 0.98) forwards"
-      loaderpage.firstElementChild.textContent = 'ABOUT';
+      if(loader) loader.remove()
+      loadertittle.textContent = 'ABOUT';
       setTimeout(()=>{
         goTO('about');
         servicesAction()
-        loaderpage.firstElementChild.textContent = '';
+        loadertittle.textContent = '';
         loaderpage.style.animation="scale-up-hor-left 1s cubic-bezier(1, 0.28, 0.28, 0.98) forwards"
         
       }, 1000)

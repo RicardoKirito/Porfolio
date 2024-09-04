@@ -122,9 +122,9 @@
     left: 100px;
 
 }
-#description p{
+#description p {
     font-size: clamp(1rem, 3vw, var(--medium));
-    font-family: "Antonio";
+    font-family: "Antonio",Arial, Helvetica, sans-serif;
     color: var(--secundayDark);
     width: 37ch;
     z-index: 1;
@@ -132,6 +132,9 @@
     left: 400px;
     align-self: end;
 
+}
+#description p span{
+    font-family: "Antonio", Arial, Helvetica, sans-serif;
 }
 #description .triangle{
     height: auto;

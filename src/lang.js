@@ -107,6 +107,7 @@ const en = {
     myd2: {
       text: "Coding is the way I express my problem-solving skills. Crazy about art and all its shapes.",
     },
+    cv: {text: "My CV", link: "/src/assets/document/ricardopaniaguaen.pdf"},
     gA: { text: "I'M GOOD AT" },
     sp1: { text: "BACK-END" },
     spd1: {
@@ -266,6 +267,7 @@ const es = {
     myd2: {
       text: "Codificar es la manera en la que expreso mis habilidades para resolver problemas. Apasionado por el arte en todas sus formas.",
     },
+    cv: {text: "Mi CV", link: "/src/assets/document/ricardopaniaguaes.pdf"},
     gA: {
       text: "SOY BUENO EN",
     },
@@ -308,13 +310,16 @@ const langs = {
 };
 
 export function translate(lan, page) {
-  const list = Object.keys(lan[page]);
-  for (var elm in list) {
+  for (var elm of Object.keys(lan[page])) {
+    const element = document.querySelector(`[data-lang ='${elm}']`);
     try {
-      document.querySelector(`[data-lang ='${list[elm]}']`).textContent =
-        lan[page][list[elm]].text;
+      if (elm === "cv") {
+        element.href = lan.about[elm].link;
+      }
+        element.textContent = lan[page][elm].text;
+
     } catch (err) {
-      err;
+      console.log(err, element, elm)
     }
   }
   if (page === "home") {
@@ -325,7 +330,8 @@ export function translate(lan, page) {
     if (element) {
       if (elm === "send") {
         element.value = lan.placeholder[elm].text;
-      } else {
+      }
+      else {
         document.querySelector(`[data-lang ='${elm}']`).placeholder =
           lan.placeholder[elm].text;
       }

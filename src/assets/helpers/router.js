@@ -167,9 +167,15 @@ const routes = {
                         <h1 class="main-description" data-lang="myd">My name is Ricardo Paniagua, proud of being
                             dominican. I’m commited
                             to interativity and creativity. </h1>
-                        <p data-lang="myd2">Coding is the way I for expressing my problem solving skills. Crazy about
-                            art and all it’s
-                            shapes</p>
+                        <p>
+                            <span data-lang="myd2">
+                                Coding is the way I for expressing my problem solving skills. Crazy about
+                                art and all it’s
+                                shapes.
+                            </span> &nbsp; &nbsp;
+                            <a class="btn" href="/src/assets/document/ricardopaniaguaen.pdf" target="_blank" data-lang="cv">My CV</a>
+                        </p>
+                        
                     </div>
                     <figure class="triangle">
                         <img src="/src/assets/img/ricardo.png" alt="Ricardo Paniagua">

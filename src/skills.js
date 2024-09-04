@@ -15,10 +15,10 @@ import { langScript } from "./lang.js";
 
 export function addScroll() {
   let about = false;
+  const change = document.querySelector("#change");
+  const title = document.querySelector(".skill-title");
+  const cr = change.getBoundingClientRect();
   document.addEventListener("wheel", (e) => {
-    const change = document.querySelector("#change");
-    const title = document.querySelector(".skill-title");
-    const cr = change.getBoundingClientRect();
     if (
       parseInt(visualViewport.height - change.getBoundingClientRect().bottom) >
         -100 &&
