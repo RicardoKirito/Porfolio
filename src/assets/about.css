@@ -63,9 +63,7 @@
     box-shadow: 0 0 10px 3px #64B163;
     animation: pulse 1.5s ease-out 0.5s infinite ;
 }
-#diacription{
 
-}
 #description .ad::before{
     content: "";
     background-color: #5557;
@@ -135,6 +133,26 @@
 }
 #description p span{
     font-family: "Antonio", Arial, Helvetica, sans-serif;
+}
+#description .btn{
+    color: var(--highlightSecundaryDark);
+    text-decoration: none;
+    background: #eee;
+    border-radius: 9ch;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    box-shadow: 5px 5px 8px 0px var(--highlightSecundary);
+    display: block;
+    width: fit-content;
+    margin: auto;
+    border: 1px solid #555;
+}
+#description .btn:hover{
+    background-color: var(--highlightPrimary);
+    color: white;
+    box-shadow: none;
 }
 #description .triangle{
     height: auto;
