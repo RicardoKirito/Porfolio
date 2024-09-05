@@ -1,11 +1,4 @@
 
-body{
-    background-color: black;
-    color: white;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
 section{
     min-height: 100vh;
     width: 100vw;
@@ -27,8 +20,9 @@ section{
 
 }
 .bs{
-    height: 493px;
-    width: 496px;
+    --area: clamp(196px, 36vw, 790px);
+    height: var(--area);
+    width: var(--area);
     border-radius: 186px;
     position: absolute;
     animation: bsUD ease infinite;

@@ -68,6 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   addProjects()
+  if(currentPage === 'home'){
+    addScroll()
+  }
   document.addEventListener("click", async e=>{
     const loaderpage =document.querySelector(".page-loader")
     

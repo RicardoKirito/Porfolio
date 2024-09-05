@@ -183,7 +183,7 @@ const routes = {
                 </div>
             </div>
         </section>
-        <section id="services">
+        <section id="services" class="center-grid">
             <div class="container">
                 <div class="left">
                     <div class="left-c">
@@ -196,7 +196,7 @@ const routes = {
                 </div>
                 <div class="right">
                     <div class="service" id=".01">
-                        <h1 id="service-t"><span data-lang="sp1">BACK-END</span></h1>
+                        <h1 id="service-t" class="font-xl"><span data-lang="sp1">BACK-END</span></h1>
                         <div class="service-d hidden">
                             <p class="d-none" data-lang="spd1">I have solid experience developing back-end solutions
                                 using C#, Node.js, and SQL Server. My expertise also includes working with MongoDB and
@@ -204,7 +204,7 @@ const routes = {
                         </div>
                     </div>
                     <div class="service" id=".02">
-                        <h1 id="service-t"><span data-lang="sp2">FONT-END</span></h1>
+                        <h1 id="service-t" class="font-xl"><span data-lang="sp2">FONT-END</span></h1>
                         <div class="service-d hidden">
                             <p class="d-none" data-lang="spd2">I have hands-on experience with React for building
                                 dynamic user interfaces. My front-end expertise includes implementing responsive designs
@@ -212,7 +212,7 @@ const routes = {
                         </div>
                     </div>
                     <div class="service" id=".03">
-                        <h1 id="service-t"><span data-lang="sp3">WEB DESIGN</span></h1>
+                        <h1 id="service-t" class="font-xl"><span data-lang="sp3">WEB DESIGN</span></h1>
                         <div class="service-d hidden">
                             <p class="d-none" data-lang="spd3">I specialize in creating visually appealing and
                                 user-friendly web designs. My skills include crafting responsive layouts and ensuring an

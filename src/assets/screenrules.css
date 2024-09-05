@@ -1,4 +1,13 @@
 @media screen and (max-width: 768px) {
+    
+    .home h1{    
+        background: linear-gradient(to top, #B2BEBB 6%, white 10%);
+        background-clip: text;
+        opacity: 1;
+    }
+    .bs{
+        height: calc(var(--area) + 100px);
+    }
     .gallery .project{
         flex-wrap: wrap;
     }
@@ -32,7 +41,7 @@
     #service-t{
         font-size: clamp(1rem, 7vw, var(--xl));
     }
-    
+
 
     .left-c  figure{
         display: none;
