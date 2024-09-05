@@ -91,7 +91,7 @@
     width: 100%;
     color: var(--primaryDark);
     transform: skewY(10deg);
-    height: clamp(600px, 40vw, 1000px);
+    height: clamp(600px, 46vw, 1000px);
     translate: 0;
     justify-content: center;
    
